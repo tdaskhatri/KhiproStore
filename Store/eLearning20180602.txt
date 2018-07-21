@@ -1,0 +1,44 @@
+02.06.2018 18:56:50|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE()); SCOPE_IDENTITY()|
+02.06.2018 18:56:50|Error  |DABase      |ExecuteNonQuery| INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE()); SCOPE_IDENTITY()|Message::Incorrect syntax near 'SCOPE_IDENTITY'.|Inner Exception::|Stack Trace::   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in E:\Store\DAL\DataAccess\DABase.cs:line 62|
+02.06.2018 19:01:27|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE()); SCOPE_IDENTITY()|
+02.06.2018 19:01:27|Error  |DABase      |ExecuteNonQuery| INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE()); SCOPE_IDENTITY()|Message::Incorrect syntax near 'SCOPE_IDENTITY'.|Inner Exception::|Stack Trace::   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in E:\Store\DAL\DataAccess\DABase.cs:line 62|
+02.06.2018 19:01:27|Error  |DAStock     |AddStock       | Incorrect syntax near 'SCOPE_IDENTITY'. |    at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in E:\Store\DAL\DataAccess\DABase.cs:line 67
+   at eLearning.DAL.DataAccess.DAStock.AddStock(DataTable dt) in E:\Store\DAL\DataAccess\DAStock.cs:line 52|
+02.06.2018 19:04:37|Info   |DABase      |ExecuteScalar  | QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE())  SELECT SCOPE_IDENTITY()|
+02.06.2018 19:04:43|Error  |DAStock     |AddStock       | Specified cast is not valid. |    at eLearning.DAL.DataAccess.DAStock.AddStock(DataTable dt) in E:\Store\DAL\DataAccess\DAStock.cs:line 52|
+02.06.2018 19:10:13|Info   |DABase      |ExecuteScalar  | QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE())  SELECT SCOPE_IDENTITY()|
+02.06.2018 19:24:49|Error  |DAStock     |AddStock       | Specified cast is not valid. |    at eLearning.DAL.DataAccess.DAStock.AddStock(DataTable dt) in E:\Store\DAL\DataAccess\DAStock.cs:line 53|
+02.06.2018 19:26:49|Info   |DABase      |ExecuteScalar  | QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE())  SELECT SCOPE_IDENTITY()|
+02.06.2018 19:33:40|Error  |DAStock     |AddStock       | Column 'SELL_PRICE_WHOLE' does not belong to table . |    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at eLearning.DAL.DataAccess.DAStock.AddStock(DataTable dt) in E:\Store\DAL\DataAccess\DAStock.cs:line 56|
+02.06.2018 19:35:05|Info   |DABase      |ExecuteScalar  | QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE())  SELECT SCOPE_IDENTITY()|
+02.06.2018 19:35:08|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO STOCK_PRICE(STOCK_ID,PURCHASE_PRICE,SELL_PRICE_RETAIL,SELL_PRICE_WHOLE_SALE)
+                                       VALUES(7,100,110,105)|
+02.06.2018 22:57:03|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO SUPPLIER(SUPPLIER_NAME,PHONE)VALUES('TULSI','033637873')|

@@ -1,0 +1,12 @@
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\DAL.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\DAL.pdb
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\Common.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\Encryption.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\Microsoft.Practices.ObjectBuilder.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\XCrypt.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\Bin\Common.pdb
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\obj\Release\DAL.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\obj\Release\DAL.pdb

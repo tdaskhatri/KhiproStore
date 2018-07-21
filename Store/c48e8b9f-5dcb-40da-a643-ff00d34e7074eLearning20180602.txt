@@ -1,0 +1,5 @@
+02.06.2018 19:26:49|Info   |DABase      |ExecuteScalar  | QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,CREATED_ON)
+                                VALUES('oil',2,GETDATE())  SELECT SCOPE_IDENTITY()|
+02.06.2018 19:33:40|Error  |DAStock     |AddStock       | Column 'SELL_PRICE_WHOLE' does not belong to table . |    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at eLearning.DAL.DataAccess.DAStock.AddStock(DataTable dt) in E:\Store\DAL\DataAccess\DAStock.cs:line 56|

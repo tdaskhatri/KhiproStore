@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8212DABE-001C-40B0-A2F9-1293C9A9D702}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Store</RootNamespace>
+    <AssemblyName>Store</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\Users\vijay.kumar\Desktop\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CustomStyle\assets\css\animate.css" />
+    <Content Include="CustomStyle\assets\css\bootstrap-select.css" />
+    <Content Include="CustomStyle\assets\css\bootstrap.css" />
+    <Content Include="CustomStyle\assets\css\bootstrap.min.css" />
+    <Content Include="CustomStyle\assets\css\cs-skin-elastic.css" />
+    <Content Include="CustomStyle\assets\css\flag-icon.min.css" />
+    <Content Include="CustomStyle\assets\css\font-awesome.min.css" />
+    <Content Include="CustomStyle\assets\css\lib\chosen\chosen-sprite%402x.png" />
+    <Content Include="CustomStyle\assets\css\lib\chosen\chosen-sprite.png" />
+    <Content Include="CustomStyle\assets\css\lib\chosen\chosen.css" />
+    <Content Include="CustomStyle\assets\css\lib\chosen\chosen.min.css" />
+    <Content Include="CustomStyle\assets\css\lib\datatable\buttons.bootstrap.min.css" />
+    <Content Include="CustomStyle\assets\css\lib\datatable\buttons.dataTables.min.css" />
+    <Content Include="CustomStyle\assets\css\lib\datatable\dataTables.bootstrap.min.css" />
+    <Content Include="CustomStyle\assets\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="CustomStyle\assets\css\normalize.css" />
+    <Content Include="CustomStyle\assets\css\style.css" />
+    <Content Include="CustomStyle\assets\css\themify-icons.css" />
+    <Content Include="CustomStyle\assets\css\variables.css" />
+    <Content Include="CustomStyle\assets\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="CustomStyle\assets\fonts\codropsicons\index.html" />
+    <Content Include="CustomStyle\assets\fonts\codropsicons\license.txt" />
+    <Content Include="CustomStyle\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="CustomStyle\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="CustomStyle\assets\fonts\icomoon\icomoon.svg" />
+    <Content Include="CustomStyle\assets\fonts\icomoon\index.html" />
+    <Content Include="CustomStyle\assets\fonts\index.html" />
+    <Content Include="CustomStyle\assets\fonts\themify.svg" />
+    <Content Include="CustomStyle\assets\js\chartjs.min.js" />
+    <Content Include="CustomStyle\assets\js\dashboard.js" />
+    <Content Include="CustomStyle\assets\js\index.html" />
+    <Content Include="CustomStyle\assets\js\less.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\chart-js\Chart.bundle.js" />
+    <Content Include="CustomStyle\assets\js\lib\chart-js\chartjs-init.js" />
+    <Content Include="CustomStyle\assets\js\lib\chosen\chosen.jquery.js" />
+    <Content Include="CustomStyle\assets\js\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\chosen\chosen.proto.js" />
+    <Content Include="CustomStyle\assets\js\lib\chosen\chosen.proto.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\buttons.bootstrap.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\buttons.colVis.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\buttons.flash.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\buttons.html5.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\buttons.print.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\datatables-init.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\dataTables.bootstrap.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\dataTables.buttons.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\datatables.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\jquery-1.12.4.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\jquery.dataTables.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\jszip.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\pdfmake.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\data-table\vfs_fonts.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\curvedLines.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\excanvas.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\flot-chart-init.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\flot-tooltip\jquery.flot.tooltip.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.categories.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.crosshair.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.pie.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.resize.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.stack.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.threshold.js" />
+    <Content Include="CustomStyle\assets\js\lib\flot-chart\jquery.flot.time.js" />
+    <Content Include="CustomStyle\assets\js\lib\gauge\gauge.js" />
+    <Content Include="CustomStyle\assets\js\lib\gmap\gmap.init.js" />
+    <Content Include="CustomStyle\assets\js\lib\gmap\gmapApi.js" />
+    <Content Include="CustomStyle\assets\js\lib\gmap\gmaps.js" />
+    <Content Include="CustomStyle\assets\js\lib\gmap\gmaps.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\peitychart\jquery.peity.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\peitychart\peitychart.init.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.algeria.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.argentina.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.brazil.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.europe.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.france.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.germany.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.greece.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.iran.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.iraq.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.russia.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.tunisia.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.turkey.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.usa.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\country\jquery.vmap.world.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\jquery.vmap.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\jquery.vmap.min.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="CustomStyle\assets\js\lib\vector-map\vector.init.js" />
+    <Content Include="CustomStyle\assets\js\main.js" />
+    <Content Include="CustomStyle\assets\js\plugins.js" />
+    <Content Include="CustomStyle\assets\js\popper.min.js" />
+    <Content Include="CustomStyle\assets\js\selectFx.js" />
+    <Content Include="CustomStyle\assets\js\vendor\index.html" />
+    <Content Include="CustomStyle\assets\js\vendor\jquery-1.11.3.min.js" />
+    <Content Include="CustomStyle\assets\js\vendor\jquery-2.1.4.min.js" />
+    <Content Include="CustomStyle\assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="CustomStyle\assets\js\widgets.js" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap-grid.css" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap-reboot.css" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap.css" />
+    <Content Include="CustomStyle\assets\scss\socials.css" />
+    <Content Include="CustomStyle\assets\scss\style.css" />
+    <Content Include="CustomStyle\assets\scss\variables.css" />
+    <Content Include="CustomStyle\assets\scss\widgets.css" />
+    <Content Include="CustomStyle\images\admin.jpg" />
+    <Content Include="CustomStyle\images\avatar\1.jpg" />
+    <Content Include="CustomStyle\images\avatar\2.jpg" />
+    <Content Include="CustomStyle\images\avatar\3.jpg" />
+    <Content Include="CustomStyle\images\avatar\4.jpg" />
+    <Content Include="CustomStyle\images\avatar\5.jpg" />
+    <Content Include="CustomStyle\images\avatar\6.jpg" />
+    <Content Include="CustomStyle\images\flag\du.png" />
+    <Content Include="CustomStyle\images\flag\es.png" />
+    <Content Include="CustomStyle\images\flag\fr.png" />
+    <Content Include="CustomStyle\images\flag\it.png" />
+    <Content Include="CustomStyle\images\flag\us.png" />
+    <Content Include="CustomStyle\images\logo.png" />
+    <Content Include="CustomStyle\images\logo2.png" />
+    <Content Include="CustomStyle\images\placeholder.png" />
+    <Content Include="CustomStyle\images\twitter_corner_black.png" />
+    <Content Include="CustomStyle\images\twitter_corner_blue.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomStyle\assets\css\bootstrap.css.map" />
+    <Content Include="CustomStyle\assets\css\bootstrap.min.css.map" />
+    <Content Include="CustomStyle\assets\css\style.css.map" />
+    <Content Include="CustomStyle\assets\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="CustomStyle\assets\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="CustomStyle\assets\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="CustomStyle\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="CustomStyle\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="CustomStyle\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="CustomStyle\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="CustomStyle\assets\fonts\FontAwesome.otf" />
+    <Content Include="CustomStyle\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CustomStyle\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="CustomStyle\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="CustomStyle\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="CustomStyle\assets\fonts\icomoon\icomoon.eot" />
+    <Content Include="CustomStyle\assets\fonts\icomoon\icomoon.ttf" />
+    <Content Include="CustomStyle\assets\fonts\icomoon\icomoon.woff" />
+    <Content Include="CustomStyle\assets\fonts\themify.eot" />
+    <Content Include="CustomStyle\assets\fonts\themify.ttf" />
+    <Content Include="CustomStyle\assets\fonts\themify.woff" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\style.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\variables.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\_gauge.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\_switches.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\_widgets.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_alert.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_background-variant.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_badge.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_border-radius.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_box-shadow.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_breakpoints.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_buttons.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_caret.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_clearfix.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_float.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_forms.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_gradients.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_grid-framework.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_grid.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_hover.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_image.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_list-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_lists.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_nav-divider.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_pagination.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_reset-text.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_resize.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_screen-reader.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_size.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_table-row.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_text-emphasis.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_text-hide.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_text-truncate.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_transition.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_visibility.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\bootstrap.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_alert.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_badge.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_breadcrumb.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_button-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_buttons.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_card.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_carousel.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_close.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_code.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_custom-forms.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_dropdown.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_forms.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_functions.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_grid.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_images.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_input-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_jumbotron.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_list-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_media.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_mixins.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_modal.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_nav.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_navbar.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_pagination.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_popover.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_print.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_progress.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_reboot.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_root.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_tables.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_tooltip.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_transitions.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_type.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_utilities.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_variables.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\bootstrap.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_alert.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_badge.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_breadcrumb.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_button-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_buttons.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_card.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_carousel.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_close.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_code.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_custom-forms.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_dropdown.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_forms.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_functions.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_grid.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_images.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_input-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_jumbotron.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_list-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_media.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_mixins.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_modal.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_nav.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_navbar.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_pagination.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_popover.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_print.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_progress.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_reboot.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_root.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_tables.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_tooltip.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_transitions.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_type.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_utilities.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_variables.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\socials.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\style.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\variables.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\_gauge.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\_switches.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\_widgets.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_align.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_background.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_borders.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_clearfix.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_display.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_embed.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_flex.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_float.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_position.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_screenreaders.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_sizing.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_spacing.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_text.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_visibility.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_alert.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_background-variant.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_badge.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_border-radius.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_box-shadow.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_breakpoints.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_buttons.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_caret.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_clearfix.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_float.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_forms.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_gradients.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_grid-framework.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_grid.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_hover.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_image.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_list-group.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_lists.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_nav-divider.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_pagination.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_reset-text.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_resize.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_screen-reader.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_size.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_table-row.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_text-emphasis.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_text-hide.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_text-truncate.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_transition.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_visibility.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_align.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_background.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_borders.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_clearfix.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_display.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_embed.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_flex.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_float.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_position.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_screenreaders.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_sizing.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_spacing.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_text.scssc" />
+    <Content Include="CustomStyle\assets\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_visibility.scssc" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap-grid.css.map" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap.css.map" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\bootstrap.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_alert.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_badge.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_button-group.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_buttons.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_card.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_carousel.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_close.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_code.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_dropdown.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_forms.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_functions.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_grid.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_images.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_input-group.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_list-group.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_media.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_mixins.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_modal.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_nav.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_navbar.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_pagination.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_popover.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_print.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_progress.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_reboot.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_root.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_tables.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_tooltip.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_transitions.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_type.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_utilities.scss" />
+    <Content Include="CustomStyle\assets\scss\bootstrap\_variables.scss" />
+    <Content Include="CustomStyle\assets\scss\socials.css.map" />
+    <Content Include="CustomStyle\assets\scss\socials.scss" />
+    <Content Include="CustomStyle\assets\scss\style.css.map" />
+    <Content Include="CustomStyle\assets\scss\style.scss" />
+    <Content Include="CustomStyle\assets\scss\variables.scss" />
+    <Content Include="CustomStyle\assets\scss\_gauge.scss" />
+    <Content Include="CustomStyle\assets\scss\_switches.scss" />
+    <Content Include="CustomStyle\assets\scss\_widgets.scss" />
+    <Content Include="CustomStyle\images\.gitignore" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WebForms\Admin\AddStockTransactions.aspx" />
+    <Content Include="WebForms\Admin\AddSupplier.aspx" />
+    <Content Include="WebForms\Admin\AddSystemStock.aspx" />
+    <Content Include="WebForms\Admin\SaleStockTransaction.aspx" />
+    <Content Include="WebForms\BasePage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Admin\AddStockTransactions.aspx.cs">
+      <DependentUpon>AddStockTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Admin\AddStockTransactions.aspx.designer.cs">
+      <DependentUpon>AddStockTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Admin\AddSupplier.aspx.cs">
+      <DependentUpon>AddSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Admin\AddSupplier.aspx.designer.cs">
+      <DependentUpon>AddSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Admin\AddSystemStock.aspx.cs">
+      <DependentUpon>AddSystemStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Admin\AddSystemStock.aspx.designer.cs">
+      <DependentUpon>AddSystemStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Admin\SaleStockTransaction.aspx.cs">
+      <DependentUpon>SaleStockTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Admin\SaleStockTransaction.aspx.designer.cs">
+      <DependentUpon>SaleStockTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\BasePage.Master.cs">
+      <DependentUpon>BasePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\BasePage.Master.designer.cs">
+      <DependentUpon>BasePage.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{8a498ea8-d3c6-45aa-8269-c310d0047f0d}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{3101ca96-e0c4-43d3-a1d2-96f0b9a54d0b}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41308</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:41308/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

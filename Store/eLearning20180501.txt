@@ -1,0 +1,46 @@
+01.05.2018 04:18:28|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,STOCK_TYPE,PURCHASE_PRICE,
+                                SELL_PRICE,CREATED_ON)
+                                VALUES('Rice',1,100,110,GETDATE())|
+01.05.2018 04:18:28|Error  |DABase      |ExecuteNonQuery| INSERT INTO WAREHOUSE_STOCK(NAME,STOCK_TYPE,PURCHASE_PRICE,
+                                SELL_PRICE,CREATED_ON)
+                                VALUES('Rice',1,100,110,GETDATE())|Message::Invalid column name 'STOCK_TYPE'.|Inner Exception::|Stack Trace::   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\DAL\DataAccess\DABase.cs:line 62|
+01.05.2018 04:18:39|Error  |DAStock     |AddStock       | Invalid column name 'STOCK_TYPE'. |    at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\DAL\DataAccess\DABase.cs:line 67
+   at eLearning.DAL.DataAccess.DAStock.AddStock(DataTable dt) in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\DAL\DataAccess\DAStock.cs:line 45|
+01.05.2018 04:20:17|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,PURCHASE_PRICE,
+                                SELL_PRICE,CREATED_ON)
+                                VALUES('Rice',1,100,110,GETDATE())|
+01.05.2018 05:37:08|Error  |AddStockTransactions|popddlStock    | Column 'SUPPLIER_NAME' does not belong to table Table. |    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.set_Item(String columnName, Object value)
+   at Store.WebForms.Admin.AddStockTransactions.popddlSupplier() in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\Store\WebForms\Admin\AddStockTransactions.aspx.cs:line 38|
+01.05.2018 05:51:26|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK_TRANSACTIONS(STOCK_ID,QUANTITY,TOTAL_AMOUNT,
+                                             AMOUNT_PAID,AMOUNT_DUE,MEASURE_TYPE,SUPPLIER_ID,CREATED_ON)
+                                             VALUES('1',1000,1000,800,200,1,1,GETDATE())|
+01.05.2018 05:51:26|Error  |DABase      |ExecuteNonQuery| INSERT INTO WAREHOUSE_STOCK_TRANSACTIONS(STOCK_ID,QUANTITY,TOTAL_AMOUNT,
+                                             AMOUNT_PAID,AMOUNT_DUE,MEASURE_TYPE,SUPPLIER_ID,CREATED_ON)
+                                             VALUES('1',1000,1000,800,200,1,1,GETDATE())|Message::Invalid column name 'CREATED_ON'.|Inner Exception::|Stack Trace::   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\DAL\DataAccess\DABase.cs:line 62|
+01.05.2018 05:51:26|Error  |DAStock     |AddStockTransactions| Invalid column name 'CREATED_ON'. |    at eLearning.DAL.DataAccess.DABase.ExecuteNonQuery(String queryString) in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\DAL\DataAccess\DABase.cs:line 67
+   at eLearning.DAL.DataAccess.DAStock.AddStockTransactions(DataTable dt) in C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\DAL\DataAccess\DAStock.cs:line 101|
+01.05.2018 05:52:23|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK_TRANSACTIONS(STOCK_ID,QUANTITY,TOTAL_AMOUNT,
+                                             AMOUNT_PAID,AMOUNT_DUE,MEASURE_TYPE,SUPPLIER_ID,CREATED_ON)
+                                             VALUES('1',1000,1000,800,200,1,1,GETDATE())|
+01.05.2018 05:54:17|Info   |DABase      |ExecuteNonQuery| QUERY|INSERT INTO WAREHOUSE_STOCK(NAME,MEASURE_TYPE,PURCHASE_PRICE,
+                                SELL_PRICE,CREATED_ON)
+                                VALUES('Daal',1,30,40,GETDATE())|

@@ -1,0 +1,21 @@
+23.06.2018 20:40:46|Info   |DABase      |ExecuteScalar  | QUERY|SELECT SALE_PRICE_RETAIL FROM STOCK_PRICE WHERE STOCK_ID =2|
+23.06.2018 20:40:47|Error  |DABase      |ExecuteScalar  | SELECT SALE_PRICE_RETAIL FROM STOCK_PRICE WHERE STOCK_ID =2|Message::Invalid column name 'SALE_PRICE_RETAIL'.|Inner Exception::|Stack Trace::   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteScalar(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command)
+   at eLearning.DAL.DataAccess.DABase.ExecuteScalar(String queryString) in E:\Store\DAL\DataAccess\DABase.cs:line 115|
+23.06.2018 23:54:55|Info   |DABase      |ExecuteScalar  | QUERY|SELECT SELL_PRICE_RETAIL FROM STOCK_PRICE WHERE STOCK_ID =2|
+23.06.2018 23:57:01|Info   |DABase      |ExecuteScalar  | QUERY|INSERT INTO SALE_TRANSACTION (CUSTOMER_ID_ID,CREATED_ON,TOTAL_AMOUNT,AMOUNT_PAID)
+                                               VALUES(0,GETDATE(),200.00,0) SELECT SCOPE_IDENTITY()|
+23.06.2018 23:59:44|Error  |DAStock     |AddSaleTransaction| Column 'AMONUT' does not belong to table Table1. |    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at eLearning.DAL.DataAccess.DAStock.AddSaleTransaction(DataTable SaleDetail, DataTable Sale) in E:\Store\DAL\DataAccess\DAStock.cs:line 149|

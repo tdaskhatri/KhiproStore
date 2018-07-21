@@ -1,0 +1,5 @@
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\bin\Debug\Common.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\DAL\bin\Debug\Common.pdb
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\obj\Release\Common.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\obj\Release\Common.pdb
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\obj\Release\Common.csprojResolveAssemblyReference.cache

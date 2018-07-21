@@ -1,0 +1,20 @@
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\bin\Debug\Common.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\bin\Debug\Common.pdb
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\obj\Debug\Common.dll
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\obj\Debug\Common.pdb
+D:\AvanzaSVN\EmiratesTransport\branches\Phase2.0\Implementation artifacts\eLearning\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\vijay.kumar\documents\visual studio 2015\Projects\BillPayment\Common\bin\Debug\Common.dll
+C:\Users\vijay.kumar\documents\visual studio 2015\Projects\BillPayment\Common\bin\Debug\Common.pdb
+C:\Users\vijay.kumar\documents\visual studio 2015\Projects\BillPayment\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\vijay.kumar\documents\visual studio 2015\Projects\BillPayment\Common\obj\Debug\Common.dll
+C:\Users\vijay.kumar\documents\visual studio 2015\Projects\BillPayment\Common\obj\Debug\Common.pdb
+C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\Common\bin\Debug\Common.dll
+C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\Common\bin\Debug\Common.pdb
+C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\Common\obj\Debug\Common.dll
+C:\Users\vijay.kumar\Documents\Visual Studio 2015\Projects\Store\Common\obj\Debug\Common.pdb
+E:\Store\Common\bin\Debug\Common.dll
+E:\Store\Common\bin\Debug\Common.pdb
+E:\Store\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Store\Common\obj\Debug\Common.dll
+E:\Store\Common\obj\Debug\Common.pdb
